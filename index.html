@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+    <title>MOVIE_RECOMMEND</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Kiwi+Maru:wght@500&family=Roboto:wght@100&display=swap');
+
+        * {
+            font-family: 'Hachi Maru Pop', cursive;
+            color: palevioletred;
+        }
+
+        .custom-font {
+            color: palevioletred;
+            /*  *で全体指定できていると考えたのだが、色の指定が掛からない部分があったため追記  */
+        }
+
+        .page-title {
+            height: 300px;
+
+            background-color: palevioletred;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            background-image: linear-gradient(0deg, rgba(100, 0, 30, 0.7), rgba(0, 0, 0, 0.0)), url("https://images.unsplash.com/photo-1579642761360-eabd1cca1e81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2187&q=80");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .page-title > h1 {
+            color: white;
+        }
+
+        .page-title > button {
+            width: 250px;
+            height: 50px;
+            margin-top: 20px;
+
+            background-color: transparent; /*背景を無色にする*/
+            border: 1px solid white;
+            color: white;
+            border-radius: 50px;
+        }
+
+        .page-title > button:hover {
+            border: 1px solid palevioletred;
+            background-color: white;
+            color: palevioletred;
+            font-size: 20px;
+            font-family: 'Kiwi Maru', serif;
+        }
+
+        .movie-info {
+            margin: 20px auto 5px auto;
+
+            display: flex;
+            justify-content: center; /*x軸の位置指定*/
+        }
+
+        .custom-card-title {
+            font-weight: bold;
+        }
+
+        .movie-card {
+            background-color: darkgrey;
+            margin: 10px;
+            width: 500px;
+        }
+
+        .movie-nav {
+            margin: 5px auto 10px auto;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+<div>
+    <div class="page-title">
+        <h1>movie recommend</h1>
+        <button>Recording</button>
+    </div>
+
+    <div class="movie-info">
+        <div class="card mb-3" style="max-width: 1000px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="https://eiga.k-img.com/images/movie/55692/photo/f239c0fd9fb48e49.jpg?1495094333"
+                         class="img-fluid rounded-start" alt="Paradise Kiss ポスター画像">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h4 class="card-title custom-card-title">Paradise Kiss</h4>
+                        <p class="card-text">
+                            進学校に通うゆかりは専門学生にスカウトされファッションショーに出演することになる。ショーに真摯に向き合う彼らの姿からゆかり自身も自らの歩む道を見つけていく物語。</p>
+                        <p class="card-text"><small class="text-body-secondary">2011年公開　北川景子　向井理</small></p>
+                        <div class="movie-card">
+                            <div class="ratio ratio-16x9">
+                                <iframe src="https://www.youtube.com/embed/Zao6oQo0i3E?si=Bk-y3BB0jt5Mlc4n"
+                                        title="YouTube video"
+                                        allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="movie-nav">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link custom-font" href="#">1</a></li>
+                <li class="page-item"><a class="page-link custom-font" href="#">2</a></li>
+                <li class="page-item"><a class="page-link custom-font" href="#">3</a></li>
+                <li class="page-item"><a class="page-link custom-font" href="#">4</a></li>
+                <li class="page-item"><a class="page-link custom-font" href="#">5</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+</div>
+</body>
+
+</html>
+
